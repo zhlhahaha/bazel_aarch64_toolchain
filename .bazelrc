@@ -5,3 +5,7 @@ build:clang_config --crosstool_top=@crosstool//:toolchains
 # Use --cpu as a differentiator.
 
 build:clang_config --compiler=gcc --cpu=aarch64
+
+build:aarch64 --host_crosstool_top=@crosstool//:toolchains --crosstool_top=@crosstool//:toolchains
+build:aarch64 --compiler=gcc --cpu=aarch64
+build:aarch64 --platforms=@io_bazel_rules_go//go/toolchain:linux_arm64_cgo
